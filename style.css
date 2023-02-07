@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+
+    display: flex;
+    position: relative;
+    padding: 28px 12%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 30px;
+    color: rgb(9, 193, 9);
+    margin-right: 10px;
+}
+
+.logo span {
+
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    padding: 5px 0;
+    margin: 0 30px;
+    font-size: 18px;
+    color: white;
+    transition: .5s ease;
+}
+
+.navbar a:hover:not(.active) {
+    color: lightseagreen;
+}
+
+.active {
+    color:  rgb(9, 193, 9) !important;
+}
+
+.register {
+    display: flex;
+    align-items: center;
+}
+
+.user {
+
+    display: flex;
+    align-items: center;
+}
+
+.user i {
+    font-size: 25px;
+    color: rgb(38, 189, 38);
+    margin-right: 6px;
+}
+
+.register a {
+
+    margin: 0 20px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.register a:hover{
+    color:lightseagreen;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color:white;
+    cursor: pointer;
+    z-index: 2;
+    display:none;
+}
+
+@media (max-width: 1280px){
+
+    header {
+        padding: 14px 2%;
+    }
+
+    .navbar a {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 1090px){
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        display: none;
+        top: 100%;
+        right: -100%; 
+        width: 270px;
+        height: 35vh;
+        background-color: lightseagreen;
+        
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: all 0.5s ease; 
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+    }
+
+    .navbar a:hover:not(.active){
+        color: white;
+        transform: translateY(5px);
+    }
+
+    .active {
+        color: white !important;
+    }
+
+    .navbar.open {
+        right: 2%;
+    }
+
+}
